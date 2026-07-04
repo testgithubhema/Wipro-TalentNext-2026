@@ -4,7 +4,7 @@ public class Q_13 {
 
 	public static void main(String[] args) {
 		int a = args.length;
-	    int x,y,w,z,i;
+		int i;
 	    int arr[][] = new int[4][4];
 	    if(a<4) {
 	        System.out.println("enter 4 values");
@@ -32,6 +32,7 @@ public class Q_13 {
 	        System.out.println();
 	    }
 	    }  
+	    
 
 	}
 
