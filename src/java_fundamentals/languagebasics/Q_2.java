@@ -1,4 +1,4 @@
-package JavaFundamentals.languagebasics;
+package java_fundamentals.languagebasics;
 
 public class Q_2 {
 
