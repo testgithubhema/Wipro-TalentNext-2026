@@ -1,0 +1,34 @@
+package collections.list;
+
+import java.util.Enumeration;
+import java.util.Iterator;
+import java.util.Vector;
+
+public class Q_7 {
+
+    public static void main(String[] args) {
+
+        Vector<Employee> v = new Vector<>();
+
+        v.add(new Employee(101, "Rahul", "rahul@gmail.com", "Male", 45000));
+        v.add(new Employee(102, "Priya", "priya@gmail.com", "Female", 50000));
+
+        System.out.println("Using Iterator:");
+
+        Iterator<Employee> it = v.iterator();
+
+        while (it.hasNext()) {
+            it.next().getEmployeeDetails();
+            System.out.println();
+        }
+
+        System.out.println("Using Enumeration:");
+
+        Enumeration<Employee> en = v.elements();
+
+        while (en.hasMoreElements()) {
+            en.nextElement().getEmployeeDetails();
+            System.out.println();
+        }
+    }
+}
