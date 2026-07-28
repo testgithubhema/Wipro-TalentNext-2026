@@ -3,7 +3,7 @@ package jdbc.Establishment_connection;
 import java.sql.Connection;
 import java.sql.DriverManager;
 
-public class Q_1 {
+public class Q_2 {
 
     public static void main(String[] args) {
 
@@ -12,13 +12,13 @@ public class Q_1 {
         String password = "hr";
 
         try {
-          
-            Class.forName("oracle.jdbc.driver.OracleDriver");
+
             Connection con = DriverManager.getConnection(url, username, password);
+
             if (con != null) {
                 System.out.println("Connection Established successfully");
             }
-        
+
             con.close();
 
         } catch (Exception e) {
