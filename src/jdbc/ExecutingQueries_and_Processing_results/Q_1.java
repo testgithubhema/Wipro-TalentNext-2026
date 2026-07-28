@@ -27,8 +27,8 @@ public class Q_1 {
 
             while(rs.next()) {
 
-                int id = rs.getInt(1);                    // Column Index
-                String lname = rs.getString("LAST_NAME"); // Column Name
+                int id = rs.getInt(1);                    
+                String lname = rs.getString("LAST_NAME"); 
 
                 System.out.println(id + "\t" + lname);
             }

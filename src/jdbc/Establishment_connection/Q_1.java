@@ -7,14 +7,10 @@ public class Q_1 {
 
     public static void main(String[] args) {
 
-        String url = "jdbc:oracle:thin:@localhost:1521/XEPDB1";
-        String username = "hr";
-        String password = "hr";
-
         try {
           
             Class.forName("oracle.jdbc.driver.OracleDriver");
-            Connection con = DriverManager.getConnection(url, username, password);
+            Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521/XEPDB1", "hr", "hr");
             if (con != null) {
                 System.out.println("Connection Established successfully");
             }
