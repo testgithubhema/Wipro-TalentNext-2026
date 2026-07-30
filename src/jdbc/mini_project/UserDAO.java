@@ -1,5 +1,7 @@
 package jdbc.mini_project;
-
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.*;
 
 public class UserDAO {
@@ -359,6 +361,73 @@ public class UserDAO {
 
         return details;
 
+    }
+ // Scenario 10
+    public void displayAllUsers() {
+
+        try {
+
+            Connection con = DBConnection.getConnection();
+
+            String sql = "SELECT * FROM USERS";
+
+            PreparedStatement ps = con.prepareStatement(sql);
+
+            ResultSet rs = ps.executeQuery();
+
+            while (rs.next()) {
+
+                System.out.println(
+                        rs.getString("USERID") + " "
+                        + rs.getString("PASSWORD") + " "
+                        + rs.getString("NAME") + " "
+                        + rs.getInt("INCORRECTATTEMPTS") + " "
+                        + rs.getInt("LOCKSTATUS") + " "
+                        + rs.getString("USERTYPE"));
+
+            }
+
+            con.close();
+
+        } catch (Exception e) {
+
+            e.printStackTrace();
+
+        }
+
+    }
+    public String[] getNames() {
+
+        String[] names = new String[100];
+
+        try {
+
+            Connection con = DBConnection.getConnection();
+
+            String sql = "SELECT NAME FROM USERS";
+
+            PreparedStatement ps = con.prepareStatement(sql);
+
+            ResultSet rs = ps.executeQuery();
+
+            int i = 0;
+
+            while (rs.next()) {
+
+                names[i] = rs.getString("NAME");
+                i++;
+
+            }
+
+            con.close();
+
+        } catch (Exception e) {
+
+            e.printStackTrace();
+
+        }
+
+        return names;
     }
 
 }
