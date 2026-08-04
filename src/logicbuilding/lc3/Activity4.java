@@ -1,0 +1,10 @@
+package logicbuilding.lc3;
+
+public class Activity4 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
